@@ -9,26 +9,27 @@ fun main(args: Array<String>) {
     var arr = arrayListOf<Int>()
     var x = readLine()!!.toInt()
     do {
-        println("Enter a valid number, 0 ends input")
-        x = readLine()!!.toInt()
         if (x > 0) {
             arr.add(x)
-        }
-    }while (x <= 0)
+        } else  println("0 ends input, it is not a number")
+        x = readLine()!!.toInt()
+        arr.add(x)
+        arr.remove(0)
+    } while (x <= 0) // first loop validate user first input
 
-    while (arr.size < 100) {
+    while (arr.size > 0) {
         x = readLine()!!.toInt()
         arr.add(x)
         if (x == 0) {
             arr.remove(0)
-            println("scores: $arr")
-            break
+            break       // second loop saves user inputs in array until 0 is entered
         }
     }
-    var average: Double = arr.sum().toDouble()/arr.size
-    println("Average score = $average")
-
-    // 2nd Method to get average
+    println("scores: $arr")
     var mean: Double = arr.average()
     println("Average score = $mean")
+
+    // 2nd Method to get average
+    var average: Double = arr.sum().toDouble()/arr.size
+    println("Average score = $average")
 }

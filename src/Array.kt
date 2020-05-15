@@ -21,6 +21,4 @@ fun main(args: Array<String>) {
 
     var numsum2 = num.union(sum)
     println("New list using union() func:$numsum2")
-
-
 }
