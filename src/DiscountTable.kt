@@ -1,4 +1,4 @@
-import kotlin.math.roundToLong
+import kotlin.math.roundToInt
 
 /*A particular retailer is having a 60 percent off sale on a variety of discontinued products.
 *The retailer would like to help its customers determine the reduced price of the merchandise
@@ -15,7 +15,7 @@ fun main(args: Array<String>) {
     for (price in prices){
         var discountPrice = price * 60 / 100
         var newPrice = (price - discountPrice)
-        var newPrices = (newPrice * 1000).roundToLong() / 1000.0
+        var newPrices = (newPrice * 100).roundToInt() / 100.0
         println("\$$price               \$$discountPrice           \$$newPrices")
     }
 }

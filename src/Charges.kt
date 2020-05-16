@@ -15,12 +15,12 @@ fun main(args: Array<String>) {
     val charges = 200
     var fine = 0
     if (hrs <= 3 )
-        println("The price for $hrs hrs is: $charges naira")
+        println("The price for $hrs hrs is: #$charges")
     while (hrs < 24) {
         fine+= 50
         hrs++
         val overstay = fine + charges
-        println("The price for $hrs hrs is: $overstay naira")
+        println("The price for $hrs hrs is: #$overstay")
         if (hrs == 24 || overstay == 1000)
             break
     }

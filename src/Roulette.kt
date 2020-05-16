@@ -29,9 +29,9 @@ fun main(args: Array<String>) {
         1, 3, 5, 7, 9, 12, 14, 16, 18, 19, 21, 23, 25, 27, 30, 32, 34, 36 -> println("Pay Red")
         2, 4, 6, 8, 10, 11, 13, 15, 17, 20, 22, 24, 26, 28, 29, 31, 33, 35 -> println("Pay Black")
     }
-    for (z in 1..36) {
-        if (z == spin) {
-            if (z in 1..18 ) { println("Pay 1 to 18") }
+    for (win in 1..36) {
+        if (win == spin) {
+            if (win in 1..18 ) { println("Pay 1 to 18") }
             else println("Pay 19 to 36") }
     }
 }

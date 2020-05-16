@@ -7,20 +7,20 @@
 fun main(args: Array<String>) {
     println("Enter scores, use 0 to end input")
     var arr = arrayListOf<Int>()
-    var x = readLine()!!.toInt()
+    var score = readLine()!!.toInt()
     do {
-        if (x > 0) {
-            arr.add(x)
-        } else  println("0 ends input, it is not a number")
-        x = readLine()!!.toInt()
-        arr.add(x)
+        if (score > 0) {
+            arr.add(score)
+        } else  println("0 ends input it is not a number, enter scores")
+        score = readLine()!!.toInt()
+        arr.add(score)
         arr.remove(0)
-    } while (x <= 0) // first loop validate user first input
+    } while (score <= 0) // first loop validate user first input
 
     while (arr.size > 0) {
-        x = readLine()!!.toInt()
-        arr.add(x)
-        if (x == 0) {
+        score = readLine()!!.toInt()
+        arr.add(score)
+        if (score == 0) {
             arr.remove(0)
             break       // second loop saves user inputs in array until 0 is entered
         }
