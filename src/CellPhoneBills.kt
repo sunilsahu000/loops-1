@@ -11,16 +11,16 @@ import kotlin.math.roundToInt
 * categories. Ensure that all of the charges are displayed using 2 decimal places.*/
 
     fun main(args: Array<String>) {
-    var cellPhonePlan = 15
+    val cellPhonePlan = 15
     var extraMessage = 0.15
     var extraMinute = 0.25
-    var emergency = 0.44
+    val emergency = 0.44
     var tax = (cellPhonePlan + emergency) * 5 / 100
     var totalBill = cellPhonePlan + emergency + tax
     println("Enter extra Text message, enter 0 if none ")
-        var extraText = readLine()!!.toInt()
+        val extraText = readLine()!!.toInt()
     println("Enter extra minute, enter 0 if none")
-        var extraCall = readLine()!!.toInt()
+        val extraCall = readLine()!!.toInt()
 
         if (extraCall == 0 && extraText == 0) {
             println("CellPhonePlan for the month: \$$cellPhonePlan")

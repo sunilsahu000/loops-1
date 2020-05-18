@@ -4,7 +4,7 @@
 * it will return it will return *one,two,three */
 
 fun main (args: Array<String>){
-    var numString  = arrayOf("One", ", ", "Two", ", ", "Three", ", ", "Four", ", ", "Five")
+    val numString  = arrayOf("One", ", ", "Two", ", ", "Three", ", ", "Four", ", ", "Five")
     for (item in numString){
         print(item)
         if (item == "Three"){

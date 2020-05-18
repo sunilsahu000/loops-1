@@ -13,7 +13,7 @@ fun main (args: Array<String>) {
     }
 
     // A program to square the value of an array
-    var arraySquare: Array<Int> = Array(16) { x -> x * x}
+    val arraySquare: Array<Int> = Array(16) { x -> x * x}
     println(arraySquare[15])
 
     // From arrayOf(2,10,3,5,20,100,7,9,80) print out all the numbers that are multiples of 10

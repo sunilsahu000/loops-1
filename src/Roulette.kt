@@ -11,11 +11,11 @@
 * Pay 13, Pay Black, Pay Odd, Pay 1 to 18
 * If the simulation results in 0 or 00 then your program should display Pay 0 or Pay 00 without any further output.*/
 fun main(args: Array<String>) {
-    var x = "00"
-    var y = x.toInt()
-    var spaces = arrayOf<Int>(0, y, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
+    val x = "00"
+    val y = x.toInt()
+    val spaces = arrayOf<Int>(0, y, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
             19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36)
-    var spin = spaces.random()
+    val spin = spaces.random()
     println("The spin resulted in $spin... ")
     for (item in spaces) {
         if (item == spin && (item != 0 || item != y)) { println("Pay $item")

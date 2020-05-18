@@ -51,11 +51,11 @@ fun main(args: Array<String>) {
                 if (month == 12){
                     month = 1
                     year +=1
-                }
+                } else month += 1
                 break
             }
             if (day == days){
-                day+=1
+                day +=1
                 //println(day)
                 if (day > days) {
                     break
@@ -63,10 +63,13 @@ fun main(args: Array<String>) {
             }
         }
     }
-    var nextDay = LocalDate.of(year,month,day)
+    val nextDay = LocalDate.of(year,month,day)
     println("Next day date is $nextDay")
     if (day == 1 && month == 1) {
         println("Hello World, Happy New Year in Advance")
+    }
+    if (day == 1 && month == 10) {
+        println("Hello Nigerians, Happy independence day in Advance")
     }
 }
 

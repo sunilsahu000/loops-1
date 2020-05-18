@@ -13,9 +13,9 @@ fun main(args: Array<String>) {
 
     println("original price  discount amount  new price")
     for (price in prices){
-        var discountPrice = price * 60 / 100
-        var newPrice = (price - discountPrice)
-        var newPrices = (newPrice * 100).roundToInt() / 100.0
+        val discountPrice = price * 60 / 100
+        val newPrice = (price - discountPrice)
+        val newPrices = (newPrice * 100).roundToInt() / 100.0
         println("\$$price               \$$discountPrice           \$$newPrices")
     }
 }
