@@ -17,6 +17,9 @@ decode messages.*/
 fun main(args: Array<String>) {
     val oneTo26 = "XYZABCDEFGHIJKLMNOPQRSTUVW"
     println(oneTo26[4])
+    for (x in 1 .. 100 step 9){
+        println(x)
+    }
 
 
 

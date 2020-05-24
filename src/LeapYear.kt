@@ -11,17 +11,9 @@ whether or not it is a leap year.*/
 
 fun main(args: Array<String>) {
     var year = readLine()!!.toInt()
-    var leapYear = 366
-    if (year % 400 == 0){
-        year += 4
-        if (year % 4 == 0) {
+    if (year % 4 == 0){
             println("$year is a Leap Year")
         }
         else println("$year is not a Leap Year")
-        if (year % 100 == 0) {
-            println("$year is a Leap Year")
-        }
-        else println("$year is not a Leap Year")
-    }
-    else println("$year is not a Leap Year")
+
 }

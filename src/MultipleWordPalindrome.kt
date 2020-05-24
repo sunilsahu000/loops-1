@@ -6,11 +6,11 @@
 
 fun main(args: Array<String>) {
     println("Write a sentence")
-    var sentence = readLine().toString().toUpperCase()
-    var sentenceReverse = sentence.reversed().toUpperCase()
+    var sentence = readLine().toString().toLowerCase()
+    sentence = sentence.replace("\\s".toRegex(), "")
+    var sentenceReverse = sentence.reversed()
     println(sentenceReverse)
     println("You entered \"$sentence\"")
-    sentenceReverse.toCharArray()
     if (sentence == sentenceReverse) {
         println("$sentence is a palindrome")
     }

@@ -10,9 +10,46 @@ import java.time.LocalDate
 * one for the year, one for the month, and one for the day. Ensure that your program works */
 
 fun main(args: Array<String>) {
-    println("Enter day, month and year each on separate lines")
+    println("Enter day")
     var day = readLine()!!.toInt()
+    println("Enter month")
     var month = readLine()!!.toInt()
+    //The loop ensure user input is accurate
+    while ((day <= 31 || day > 31) && (month <= 12 || month > 12)) {
+        if (month == 2 && day > 29) {
+            println("Incorrect day or month")
+            println("Enter day")
+            day = readLine()!!.toInt()
+            println("Enter month")
+            month = readLine()!!.toInt()
+        } else
+            if ((month == 4 || month == 6 ||
+                            month == 9 || month == 11) && day > 30) {
+                println("Incorrect day or month")
+                println("Enter day")
+                day = readLine()!!.toInt()
+                println("Enter month")
+                month = readLine()!!.toInt()
+            } else
+                if ((month == 1 || month == 3
+                                || month == 5 ||month == 7 || month == 8
+                                || month == 10 || month == 12) && day > 31) {
+                    println("Incorrect day or month")
+                    println("Enter day")
+                    day = readLine()!!.toInt()
+                    println("Enter month")
+                    month = readLine()!!.toInt()
+                }
+        else if (month > 12 || day > 31) {
+                    println("Invalid date")
+                    println("Enter day")
+                    day = readLine()!!.toInt()
+                    println("Enter month")
+                    month = readLine()!!.toInt()
+                }
+        else break
+    }
+    println("Enter year")
     var year = readLine()!!.toInt()
     val today = LocalDate.of(year, month, day)
     println("Today's date is $today")
@@ -39,7 +76,6 @@ fun main(args: Array<String>) {
             }
             if (day == days){
                 day+=1
-                println(day)
                 if (day > days) {
                     break
                 }
@@ -56,7 +92,6 @@ fun main(args: Array<String>) {
             }
             if (day == days){
                 day +=1
-                //println(day)
                 if (day > days) {
                     break
                 }
