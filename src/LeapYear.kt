@@ -10,10 +10,15 @@ Write a program that reads a year from the user and displays a message indicatin
 whether or not it is a leap year.*/
 
 fun main(args: Array<String>) {
-    var year = readLine()!!.toInt()
+    var year =Integer.valueOf(readLine())
     if (year % 4 == 0){
             println("$year is a Leap Year")
         }
         else println("$year is not a Leap Year")
-
 }
+
+    
+           
+        
+    
+
